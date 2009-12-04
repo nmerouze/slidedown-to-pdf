@@ -24,7 +24,7 @@ class VirtualBrowser
   end
   
   def fetch(url, number, file_name)
-    0.upto(number) do |i|
+    0.upto(number - 1) do |i|
       page_url = NSURL.URLWithString("#{url}/##{i}")
       view.mainFrame.loadRequest NSURLRequest.requestWithURL(page_url)
       view.mainFrame.reload
@@ -50,7 +50,7 @@ class VirtualBrowser
   end
   
   def webView(view, didFinishLoadForFrame:frame)
-    NSRunLoop.currentRunLoop.runUntilDate NSDate.dateWithTimeIntervalSinceNow(0.5)
+    NSRunLoop.currentRunLoop.runUntilDate NSDate.dateWithTimeIntervalSinceNow(0.2)
     save
   end
  
