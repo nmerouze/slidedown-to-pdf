@@ -1,4 +1,6 @@
-
+framework 'Cocoa'
+framework 'Quartz'
+framework 'WebKit'
 
 module ToPDF
   class VirtualBrowser

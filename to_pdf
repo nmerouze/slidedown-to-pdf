@@ -1,8 +1,4 @@
 #!/usr/local/bin/macruby
-framework 'Cocoa'
-framework 'Quartz'
-framework 'WebKit'
-
 require 'optparse'
 require File.expand_path(File.join(File.dirname(__FILE__), 'to_pdf.rb'))
 
